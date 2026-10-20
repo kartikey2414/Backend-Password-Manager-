@@ -5,7 +5,7 @@ const bodyparser = require("body-parser");
 const cors = require("cors");
 dotenv.config();
 
-const url = "mongodb://localhost:27017";
+const url = process.env.MONGO_URI || "mongodb://localhost:27017";
 const client = new MongoClient(url);
 
 const dbName = "passop";
